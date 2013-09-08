@@ -32,14 +32,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do
-  gem 'taps'
-  gem 'rvm'
-  gem 'sqlite3'
+group :production, :staging do
+  gem "pg"
 end
 
-group :production do
-  gem 'pg'
+group :development, :test do
+  gem "sqlite3-ruby", :require => "sqlite3"
 end
 
 # Use ActiveModel has_secure_password
