@@ -1,6 +1,7 @@
 Heroku link: http://intense-ridge-3945.herokuapp.com/
 
-***********************HW2**************************************
+== HW2
+
 added image, 4 different inputs, link to my github repo.
 
 What I did:
@@ -8,7 +9,7 @@ used divs to position the containers properly, applied styles to divs, that's it
 
 Issues: 
 no issues
-****************************************************************
+
 
 == README
 
