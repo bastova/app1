@@ -1,6 +1,6 @@
 Heroku link: http://intense-ridge-3945.herokuapp.com/
 
-== HW2
+== HW3
 
 added image, 4 different inputs, link to my github repo.
 
