@@ -1,19 +1,52 @@
-<div class="content">
-<table class="users_table">
+<div class="content" style="width: 500px;
+	height: 700px;
+	font-family: verdana;
+	padding-top: 20px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #DDD;
+	text-align: center;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.5);">
+<table class="users_table" style="width: 455px;
+	table-layout:fixed;
+	height:auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #BBB;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;">
  	<tr>
- 		<td class="users_title">name</td>
- 		<td class="users_title">email</td>
- 		<td class="users_title">password</td>
+ 		<td class="users_title" style="border: 1px solid #999;
+	color:white;">name</td>
+ 		<td class="users_title" style="border: 1px solid #999;
+	color:white;">email</td>
+ 		<td class="users_title" style="border: 1px solid #999;
+	color:white;">password</td>
  	</tr>
  	<% @users.each do |user| %>
  	<tr>
- 		<td class="users_cell"><%= user.name %></td>
- 		<td class="users_cell"><%= user.email %></td>
- 		<td class="users_cell" style="-webkit-text-security: disc;"><%= user.password %></td>
+ 		<td class="users_cell" style="overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;"><%= user.name %></td>
+ 		<td class="users_cell" style="overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;"><%= user.email %></td>
+ 		<td class="users_cell" style="-webkit-text-security: disc;overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;"><%= user.password %></td>
  	</tr>
  	<% end %>
 </table>
 
 <br>
-<a class="users_link_button" href="<%= root_path %>"> Home </a>
+<a class="users_link_button" style="text-decoration: none;
+	background-color: white;
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	color: gray;
+	height: 30px;
+	line-height: 30px;" href="<%= root_path %>"> Home </a>
 </div>
