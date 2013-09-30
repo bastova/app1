@@ -1,0 +1,19 @@
+<div class="content">
+<table class="users_table">
+ 	<tr>
+ 		<td class="users_title">name</td>
+ 		<td class="users_title">email</td>
+ 		<td class="users_title">password</td>
+ 	</tr>
+ 	<% @users.each do |user| %>
+ 	<tr>
+ 		<td class="users_cell"><%= user.name %></td>
+ 		<td class="users_cell"><%= user.email %></td>
+ 		<td class="users_cell" style="-webkit-text-security: disc;"><%= user.password %></td>
+ 	</tr>
+ 	<% end %>
+</table>
+
+<br>
+<a class="users_link_button" href="<%= root_path %>"> Home </a>
+</div>
