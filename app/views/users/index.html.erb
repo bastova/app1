@@ -38,7 +38,7 @@
     white-space: nowrap;"><%= user.password %></td>
 		<td><%= link_to "show", user_path(user.id) %></td>
 		<td><%= link_to "edit", edit_user_path(user.id) %> </td>
-		<td><%= link_to "destroy", user, confirm: "you sure you want to do this?", method: :delete %> </td>
+		<td><%= button_to "destroy", user, confirm: "you sure you want to do this?", method: :delete %> </td>
  	</tr>
  	<% end %>
 </table>
