@@ -7,6 +7,10 @@
 		<td>user</td>
 	</tr> 
 	<% @pets.each do |pet| %> 
-		
+		<tr> 
+			<td><%= pet.name %></td> 
+			<td><%= pet.age %></td> 
+			
+		</tr> 
 	<% end %> 
 </table>
