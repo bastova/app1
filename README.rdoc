@@ -1,14 +1,6 @@
 Heroku link: http://intense-ridge-3945.herokuapp.com/
 
-== HW4
-
-so, I ran into a bunch of issues:
-1. Rails didn't want to work on win8, so I had to go to ExecJs files and change some code (switch to UTF-8) //got the solution from StackOverflow
-2. Rails 4.0.0 has some permission problem when running User.new(params[:user]), had to change to User.new(user_params) and def user_params params.require(:user).permit(:name, :email, :pass)
-3. Apparently Heroku doesn't like ruby's stylesheets, so I had to type in the styles directly into the html fiels via style="". I don't know how to fix it yet :(
-
-note: when testing my website, on the users/new page name is REQUIRED, so if you don't write your name down, the table won't add the new user.
-== HW2
+== HW3
 
 added image, 4 different inputs, link to my github repo.
 
