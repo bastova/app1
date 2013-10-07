@@ -9,7 +9,8 @@
 	<% @pets.each do |pet| %> 
 		<tr> 
 			<td><%= pet.name %></td> 
-			<td><%= pet.age %></td>  
+			<td><%= pet.age %></td> 
+			<td><%= pet.user.name %></td> 			
 			<td><%= link_to "show", pet_path(pet.id) %></td>
 			<td><%= link_to "edit", edit_pet_path(pet.id) %> </td>
 			<td><%= button_to "destroy", pet, confirm: "you sure you want to do this?", method: :delete %> </td>
