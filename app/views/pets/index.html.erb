@@ -13,7 +13,7 @@
 			<td><%= pet.user.name %></td>  
 			<td><%= link_to "show", pet_path(pet.id) %></td>
 			<td><%= link_to "edit", edit_pet_path(pet.id) %> </td>
-			<td><%= link_to "destroy", pet, confirm: "you sure you want to do this?", method: :delete %> </td>
+			<td><%= button_to "destroy", pet, confirm: "you sure you want to do this?", method: :delete %> </td>
 		</tr> 
 	<% end %> 
 </table>
