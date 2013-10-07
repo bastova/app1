@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  type: 
   age: 1
+  user_id: 
 
 two:
   name: MyString
-  type: 
   age: 1
+  user_id: 

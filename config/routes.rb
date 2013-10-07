@@ -3,6 +3,8 @@ App1::Application.routes.draw do
   # get "users/new"
   # get "users/index"
   resources :users
+  resources :pets
+  resources :guilds
   root :to => 'landing_page#home'
 
   # get "home/index"

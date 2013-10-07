@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130929215116) do
+ActiveRecord::Schema.define(version: 20131007221651) do
 
   create_table "guilds", force: true do |t|
     t.string   "name"
@@ -22,11 +22,13 @@ ActiveRecord::Schema.define(version: 20130929215116) do
 
   create_table "pets", force: true do |t|
     t.string   "name"
-    t.string   "type"
     t.integer  "age"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "pets", ["user_id"], name: "index_pets_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

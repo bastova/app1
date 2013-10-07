@@ -1,0 +1,16 @@
+<h1>Pets#edit</h1>
+
+<%= form_for(@pet) do |f| %> 
+<div class="field">    
+	<p>name</p> <%= f.text_field :name%>    
+</div>    
+<div class="field">    
+	<p>age</p><%= f.text_field :age%>    
+</div>    
+<div class="field">    
+	<p>user</p><%= f.collection_select :user_id, User.all, :id, :name%>   
+</div>
+<div class="actions">      
+	<%= f.submit %>    
+</div> 
+<% end %>
