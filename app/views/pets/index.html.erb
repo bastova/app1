@@ -1,10 +1,12 @@
+
+<div class="content">
 <h1>Pets index</h1>
 
-<table> 
+<table class="pets-table"> 
 	<tr>
-		<td>name</td> 
-		<td>age</td>
-		<td>user</td>
+		<td class="pets_title">name</td> 
+		<td class="pets_title">age</td>
+		<td class="pets_title">user</td>
 	</tr> 
 	<% @pets.each do |pet| %> 
 		<tr> 
@@ -17,3 +19,4 @@
 		</tr> 
 	<% end %> 
 </table>
+</div>
