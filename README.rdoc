@@ -1,19 +1,5 @@
 Heroku link: http://intense-ridge-3945.herokuapp.com/
 
-== HW5
-
-I forgot to include the schemas for my tables in the previous assignment, however I created the tables and the schemas could be viewed fom db/schema.rb
-I had 3 tables before, but for this assignment I had a lot of trouble with updating the relations between the tables. In the end I simply recreated the tables instead of updating them.
-
-* Schemas:
-Users { name: string, email:string, password:string }
-Pets { name:string, age:integer, user_id:integer }
-
-As usual, I ran into troubles with Rails 4.0. 
-* For some reason it didn't like attr_accessible so I had to install a new gem 'protected_attributes'
-* Then I had some issues with user being returned as Nil after creating a new pet, so I couldn't access the user attribute 'name' (e.g. pet.user.name).
-This was caused by my old entries in the heroku db. If I added a pet to an old user, the user was returned as Nil, if I created a new user and then added a new pet to this new user, then the user was returned correctly. In the end I just removed the old users.
-
 == HW3
 
 added image, 4 different inputs, link to my github repo.
