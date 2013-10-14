@@ -1,8 +1,8 @@
 
 <div class="content">
-<h1>Pets index</h1>
+<h1>Pets</h1>
 
-<table class="pets-table"> 
+<table class="pets_table"> 
 	<tr>
 		<td class="pets_title">name</td> 
 		<td class="pets_title">age</td>
@@ -10,13 +10,23 @@
 	</tr> 
 	<% @pets.each do |pet| %> 
 		<tr> 
-			<td><%= pet.name %></td> 
-			<td><%= pet.age %></td> 
-			<td><%= pet.user.name %></td> 			
-			<td><%= link_to "show", pet_path(pet.id) %></td>
-			<td><%= link_to "edit", edit_pet_path(pet.id) %> </td>
-			<td><%= button_to "destroy", pet, confirm: "you sure you want to do this?", method: :delete %> </td>
+			<td class="pets_cell"><%= pet.name %></td> 
+			<td class="pets_cell"><%= pet.age %></td> 
+			<td class="pets_cell"><%= pet.user.name %></td> 			
+			<td class="pets_cell"><%= link_to "show", pet_path(pet.id) %></td>
+			<td class="pets_cell"><%= link_to "edit", edit_pet_path(pet.id) %> </td>
+			<td class="pets_cell"><%= button_to "destroy", pet, confirm: "you sure you want to do this?", method: :delete %> </td>
 		</tr> 
 	<% end %> 
 </table>
+
+<br>
+<a class="pets_link_button" style="text-decoration: none;
+	background-color: white;
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	color: gray;
+	height: 30px;
+	line-height: 30px;" href="<%= root_path %>"> Home </a>
 </div>
