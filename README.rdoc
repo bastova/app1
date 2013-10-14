@@ -1,5 +1,18 @@
 Heroku link: http://intense-ridge-3945.herokuapp.com/
 
+== HW6
+
+3 validations:
+
+* name can't be blank
+* email should have correct format
+* password should be at least 6 characters
+
+Styles:
+
+* added bootstrap navigation bar with affix()
+* added body/content style to all pages
+
 == HW3
 
 added image, 4 different inputs, link to my github repo.
