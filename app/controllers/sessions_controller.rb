@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
 	 
 		render :text => "Hi #{user.name}! You've signed up."
 	  end
+	  session[:user_id] = @authorization.user.id
 	end
 
   def failure
@@ -23,7 +24,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    sleep 3
     redirect_to root_url
   end
 end

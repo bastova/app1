@@ -46,6 +46,7 @@ $('#nav').affix({
 	</ul>
 	<ul class="nav navbar-nav"> 
 		<%  
+		puts session[:user_id]
 		   if session[:user_id] == nil
 		%>
 		 <li><%= link_to "Login", "/login" %>  </li> 
