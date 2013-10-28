@@ -27,10 +27,6 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'rails-observers'
-gem 'actionpack-page_caching'
-gem 'actionpack-action_caching'
-gem 'activerecord-deprecated_finders'
 gem 'protected_attributes'
 
 gem 'omniauth'
