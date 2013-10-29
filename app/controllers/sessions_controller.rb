@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
 	 
 		render :text => "Hi #{user.name}! You've signed up."
 		session[:user_id] = user.id
+		
 	  end
 	end
 
