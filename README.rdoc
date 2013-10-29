@@ -1,5 +1,40 @@
 Heroku link: http://intense-ridge-3945.herokuapp.com/
 
+== HW7
+
+custom gems:
+I installed the omniauth-facebook gem which allows singning in with your facebook account. I didn't use devise so signing
+in doesn't actually do anything (except for the button in the nav bar changing from Login to Logout). I had many issues 
+with this gem, finally resolved most of them. Problems that ran into:
+
+* gem omniauth is not supported well on heroku, had to switch to omniauth-facebook 1.4.0
+* facebook makes you deal with ssl certificates, I had to look up solutions on stackoverflow
+* had an issue with setting the session[:user_id]
+* I still haven't figured out how to show the user that he has signed in, and then redirect him to the home page
+
+How to use it (while I was typing this I realized that I could render views to make the navigation easier, I will work
+on it later, so for now it's a bit tricky to use) :
+
+1. I have the navigation bar on every page. If you are a new user you will see the button "Login"
+2. "Login" redirects you to the login page, on this page click on "Connect with Facebook"
+3. enter your facebook credentials, it will then redirect you back to my app and say "Hi [your name]! You've signed up"
+4. this page has no navigation bar, so you then have to manually type in my website address.
+5. when you are back on the main page, "Login" has changed to "Logout"
+6. you can now log out. When you click on "Logout" it redirects you to the home page.
+7. If you now log in again, it will say "Welcome back [your name]! You have already signed up", since you are already 
+in the database. This page also has no nav bar yet.
+
+The main issue is that logging out doesn't actually end the facebook session, so when you log in again it automatically
+logs you in with your current facebook account. To test multiple facebook accounts you have to first log out from 
+facebook and then log in with my app, in this case you will be prompted to the facebook login page. I don't know how to
+deal with this issue. This only happens when you click "Login" for the second time, the first-time login works fine.
+
+Note, this functionality conflicts with the previous users functionality, so destroying a user from the Users table
+will not allow you to login again as that user, so for this assignment don't try to destroy users.
+
+WARNING! If you log in with your facebook account I will be able to see your facebook name and your email, so if this
+is a problem for you just create a fake facebook account for testing.
+
 == HW6
 
 3 validations:
