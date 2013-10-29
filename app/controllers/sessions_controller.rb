@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new
   end
 
-=begin
+
   def create
 	  auth_hash = request.env['omniauth.auth']
 	 
@@ -18,7 +18,8 @@ class SessionsController < ApplicationController
 	  end
 	  session[:user_id] = @authorization.user.id
 	end
-=end
+
+=begin
 def create
   auth_hash = request.env['omniauth.auth']
  
@@ -31,6 +32,7 @@ def create
  
     render :text => "Welcome #{auth.user.name}!"
 end
+=end
 
   def failure
 	  render :text => "Sorry, but you didn't allow access to our app!"
