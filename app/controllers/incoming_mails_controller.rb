@@ -9,7 +9,7 @@ class IncomingMailsController < ApplicationController
 
     # Do some other stuff with the mail message
 
-	@mail = Message.new(message.subject, message.body.decoded)
+	@mail = Message.new(message.subject, message.body.decoded, "empty")
 	#@mail.write_attribute(:subject, message.subject)
 	#@mail.set_attribute(:body, message.body.decoded)
 	@mail.save
