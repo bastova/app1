@@ -3,13 +3,13 @@ App1::Application.routes.draw do
   # get "users/new"
   # get "users/index"
   
-   #post '/incoming_mails' => 'incoming_mails#create'
+   post '/incoming_mails' => 'incoming_mails#create'
   get   '/login', :to => 'sessions#new', :as => :login
 	get '/auth/:provider/callback', :to => 'sessions#create'
 	get '/auth/failure', :to => 'sessions#failure'
 	get '/logout', :to => 'sessions#destroy'
 
-  resources :incoming_mails
+  #resources :incoming_mails
   resources :users
   resources :pets
   resources :guilds
