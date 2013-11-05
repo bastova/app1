@@ -1,5 +1,20 @@
 Heroku link: http://intense-ridge-3945.herokuapp.com/
 
+== HW8
+
+I tried two addons, one of them was CloudMailin
+
+how it works is if you send an email to cc9966cddf7e4227c6aa@cloudmailin.net (generated email address for my account) it 
+sends an HTTP POST request to the page at myappaddress.com/incoming_mails. What I haven't figured out yet is how to 
+get this message and process it. So if I go to my cloudmailin settings I see that the message is delivered, but since 
+the page at .../incoming_mails has no GET method, I cannot open it :/ I am a bit confused about how to use it really, so
+the delivery works fine, but I have no idea how to display it.
+
+Instead, I added another addon Newrelic. This is a website analytics addons that gives me access to the analytics page
+and allows to track the number of users, website speed and the number of requests at each page. I successfully installed
+it and all the info is available from my heroku account. The question I have is how do I showcase this addon, since
+it is not accessible publicly for my website? So, how do I show that I did the homework?
+
 == HW7
 
 custom gems:
