@@ -1,5 +1,12 @@
 Heroku link: http://intense-ridge-3945.herokuapp.com/
 
+== HW9
+
+I am not using devise. I added two scopes: one for the pets_controller and one for the index view of the pets. If you now
+try to add a new pet, it has to be more than 4 years old or else it won't be displayed. Additionally, Anton's pets (my 
+pets) are prioritized over other users' pets, so they are shown in the top table on the /Pets page, while all other pets
+are listed in the second table.
+
 == HW8
 
 I tried two addons, one of them was CloudMailin
