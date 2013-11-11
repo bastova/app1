@@ -3,12 +3,13 @@
 <h1>Pets</h1>
 
 <table class="pets_table"> 
+	<tr>Anton's Pets</tr>
 	<tr>
 		<td class="pets_title">name</td> 
 		<td class="pets_title">age</td>
 		<td class="pets_title">user</td>
 	</tr> 
-	<% @pets.each do |pet| %> 
+	<% @pets.high_priority.each do |pet| %> 
 		<tr> 
 			<td class="pets_cell"><%= pet.name %></td> 
 			<td class="pets_cell"><%= pet.age %></td> 
@@ -18,6 +19,27 @@
 			<td class="pets_cell"><%= button_to "destroy", pet, confirm: "you sure you want to do this?", method: :delete %> </td>
 		</tr> 
 	<% end %> 
+	
+</table>
+<br>
+<table class="pets_table"> 
+	<tr>Other Pets</tr>
+	<tr>
+		<td class="pets_title">name</td> 
+		<td class="pets_title">age</td>
+		<td class="pets_title">user</td>
+	</tr> 
+	<% @pets.low_priority.each do |pet| %> 
+		<tr> 
+			<td class="pets_cell"><%= pet.name %></td> 
+			<td class="pets_cell"><%= pet.age %></td> 
+			<td class="pets_cell"><%= pet.user.name %></td> 			
+			<td class="pets_cell"><%= link_to "show", pet_path(pet.id) %></td>
+			<td class="pets_cell"><%= link_to "edit", edit_pet_path(pet.id) %> </td>
+			<td class="pets_cell"><%= button_to "destroy", pet, confirm: "you sure you want to do this?", method: :delete %> </td>
+		</tr> 
+	<% end %> 
+	
 </table>
 
 <br>

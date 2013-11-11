@@ -3,6 +3,8 @@
 
 <table class="users_table" >
  	<tr>
+		<td class="users_title" style="border: 1px solid #999;
+	color:white;">id</td>
  		<td class="users_title" style="border: 1px solid #999;
 	color:white;">name</td>
  		<td class="users_title" style="border: 1px solid #999;
@@ -12,6 +14,9 @@
  	</tr>
  	<% @users.each do |user| %>
  	<tr>
+		<td class="users_cell" style="overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;"><%= user.id %></td>
  		<td class="users_cell" style="overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;"><%= user.name %></td>

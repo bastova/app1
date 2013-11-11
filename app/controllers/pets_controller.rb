@@ -14,7 +14,8 @@ class PetsController < ApplicationController
   end
   
   def index  
-	@pets = Pet.all  
+	#@pets = Pet.all
+	@pets = Pet.adult
   end
 
   def show 
