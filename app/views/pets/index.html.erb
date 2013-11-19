@@ -1,4 +1,24 @@
 
+<script type="text/javascript">
+$(
+	function(){
+		$('.myclass').hide();
+	
+		$('.text').hover(function(){
+			$(this).css('color','purple');
+			$(this).css('cursor','pointer');
+		});
+		$('.text').click(function(){
+			$('.myclass').toggle();
+		});
+	
+		$('.myclass').hover(function(){
+			$(this).css('background','green');
+		});
+	}
+);
+</script>
+
 <div class="content">
 <h1>Pets</h1>
 
