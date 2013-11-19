@@ -1,5 +1,10 @@
 Heroku link: http://intense-ridge-3945.herokuapp.com/
 
+== HW10
+
+go to the /pets page and hover over CLICK ME to change color of the text, click on it to see the red square appear, hover
+over the square to change its color.
+
 == HW9
 
 I am not using devise. I added two scopes: one for the pets_controller and one for the index view of the pets. If you now
